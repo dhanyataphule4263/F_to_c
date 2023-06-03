@@ -1,2 +1,122 @@
 # F_to_c
-Fahrenheit to Celcius converter
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+  *{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+  }
+   
+  div{
+    width: 100%;
+    height: 500px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(" https://img.freepik.com/premium-photo/beautiful-sky-background-sunset-sunrise-sky-with-light-clouds-real-sun_638259-822.jpg?w=740");
+  }
+
+  h1{
+    background: url(" https://upload.wikimedia.org/wikipedia/commons/1/1d/Taj_Mahal_%28Edited%29.jpeg");
+    text-align: center;
+  }
+
+  input {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+button {
+  width: 200px;
+  height: 70px;
+  background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); 
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  border-bottom: 4px solid #0B5652;
+  color: #fbfbfb;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+  font-size: 15px;
+  text-align: left;
+  text-indent: 5px;
+  box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+button:active {
+  box-shadow: 0px 2px 0px 0px rgba(0,0,0,.2);
+  top: 1px;
+}
+
+button:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: 20px solid #187dbc;
+  border-bottom: 20px solid #187dbc;
+  border-left: 16px solid transparent;
+  border-right: 20px solid #187dbc;
+  position: absolute;
+  opacity: 0.6; 
+  right: 0;
+  top: 0;
+  border-radius: 0 5px 5px 0;  
+}
+
+  @media(max-width: 800px){
+    h1{ font-size: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<section>
+<h1><i class="fa fa-thermometer-empty" aria-hidden="true"></i>  How to Convert Farenheit  to  Celcius(°C to °F)   <i class="fa fa-thermometer-empty" aria-hidden="true"></i> </h1>
+ 
+
+<div>
+  <br>
+  <input type="number" name="" placeholder="Enter Farenheit Degree" 
+  id="fd"> 
+  <button onclick="changeDeg()"> Change to Celcius </button>
+  <input type="text" name="" placeholder="Degree in Celcius"
+  id="cd" >
+
+</div>
+</section>
+
+<script>  
+  const changeDeg = () =>{
+    const fv = document.getElementById('fd').value;
+
+    // T(°C) = (T(°F) - 32) × 5/9
+
+    let newcv = (fv - 32) * 5/9;
+
+    console.log(newcv);
+
+    document.getElementById('cd').value = newcv+"* cel";
+  }
+</script>
+</body>
+</html>
